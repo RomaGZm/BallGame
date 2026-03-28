@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/BallGame/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/BallGame/Gameplay/Scenes/SampleScene.unity
+    guid: 59f2204fd06677346bebcc4f41315c3f
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 742b7c58d7a022e448aae1de4bfb365a, type: 3}
   m_UseUCBPForAssetBundles: 0
