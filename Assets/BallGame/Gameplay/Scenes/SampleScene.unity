@@ -1477,6 +1477,9 @@ MonoBehaviour:
   rigidbodyBall: {fileID: 726886518}
   infectionArea: {fileID: 897150562}
   obstacleManager: {fileID: 2010103095}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &825440441
 GameObject:
   m_ObjectHideFlags: 0

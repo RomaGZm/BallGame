@@ -14,7 +14,7 @@ namespace BallGame.Gameplay.Door
         {
             if (door.isOpen) return;
 
-            if (other.gameObject.layer == triggeredLayer)
+            if (((1 << other.gameObject.layer) & triggeredLayer) != 0)
             {
                 door.Open(() =>
                 {

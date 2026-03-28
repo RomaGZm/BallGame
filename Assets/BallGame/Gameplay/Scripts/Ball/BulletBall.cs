@@ -11,6 +11,9 @@ namespace BallGame.Gameplay.Ball
         [SerializeField] private Rigidbody rigidbodyBall;
         [SerializeField] private SphereCollider infectionArea;
         [SerializeField] private ObstacleManager obstacleManager;
+        [Header("Layers")]
+        public LayerMask obstacleLayer;
+
         //Event calling then stopping 
         public Action onStopMovement;
 
@@ -30,12 +33,12 @@ namespace BallGame.Gameplay.Ball
             rigidbodyBall.linearVelocity = Vector3.zero;
             rigidbodyBall.angularVelocity = Vector3.zero;
 
-            if (collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+            if (((1 << collision.gameObject.layer) & obstacleLayer) != 0)
             {
-                var hits = OverlapBySphereCollider(infectionArea, LayerMask.GetMask("Obstacle"));
+                var hits = OverlapBySphereCollider(infectionArea, obstacleLayer);
                 foreach (Collider c in hits)
                 {
-                    obstacleManager.Infect(c.gameObject, 1f, Color.yellow);
+                    obstacleManager.Infect(c.gameObject, 1f, Color.yellow);//Optimized call
                     // c.gameObject.GetComponent<Obstacle>().Infection();
                 }
 
