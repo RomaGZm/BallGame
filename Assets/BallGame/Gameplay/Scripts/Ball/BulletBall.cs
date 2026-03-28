@@ -10,7 +10,7 @@ namespace BallGame.Gameplay.Ball
         [Header("Components")]
         [SerializeField] private Rigidbody rigidbodyBall;
         [SerializeField] private SphereCollider infectionArea;
-
+        [SerializeField] private ObstacleManager obstacleManager;
         //Event calling then stopping 
         public Action onStopMovement;
 
@@ -35,7 +35,8 @@ namespace BallGame.Gameplay.Ball
                 var hits = OverlapBySphereCollider(infectionArea, LayerMask.GetMask("Obstacle"));
                 foreach (Collider c in hits)
                 {
-                    c.gameObject.GetComponent<Obstacle>().Infection();
+                    obstacleManager.Infect(c.gameObject, 1f, Color.yellow);
+                    // c.gameObject.GetComponent<Obstacle>().Infection();
                 }
 
             }

@@ -1,9 +1,11 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using UnityEngine;
 
 namespace BallGame.Gameplay.Obstacles
 {
+    [Obsolete]
     public class Obstacle : MonoBehaviour
     {
         [Header("Infection")]

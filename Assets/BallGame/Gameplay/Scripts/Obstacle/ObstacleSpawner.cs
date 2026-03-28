@@ -10,6 +10,7 @@ namespace BallGame.Gameplay.Obstacles
 
         [Header("Obstacle Settings")]
         [SerializeField]private GameObject obstaclePrefab;
+        [SerializeField] private ObstacleManager obstacleManager;
         public int obstacleCount = 10;
         public float offsetY = 0f;
         public int maxAttempts = 30;
@@ -54,6 +55,7 @@ namespace BallGame.Gameplay.Obstacles
                 {
                     GameObject obj = Instantiate(obstaclePrefab, pos, Quaternion.identity, transform);
                     spawnedBounds.Add(newBounds);
+                    obstacleManager.Register(obj, obj.GetComponent<MeshRenderer>());
                     return;
                 }
             }

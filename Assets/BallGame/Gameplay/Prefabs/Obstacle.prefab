@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 626515595498973193}
   - component: {fileID: 5949796561304992098}
   - component: {fileID: 9007075622173414712}
-  - component: {fileID: 1452165464769239164}
   m_Layer: 8
   m_Name: Obstacle
   m_TagString: Untagged
@@ -113,19 +112,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1452165464769239164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8245255518193904168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 878562111f1c1e44197463694d29546f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  destroyDuration: 1
-  infectionColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  material: {fileID: 2100000, guid: bb968930d2d31fc40b8963b4280369bb, type: 2}
-  rend: {fileID: 5949796561304992098}
